@@ -23,6 +23,8 @@ INNER JOIN customer_purchases as cp
 	ON cp.customer_id = c.customer_id
 GROUP BY c.customer_last_name, c.customer_first_name
 HAVING cost > 2000
+ORDER BY c.customer_last_name, c.customer_first_name
+
 
 --Temp Table
 /* 1. Insert the original vendor table into a temp.new_vendor and then add a 10th vendor: 
